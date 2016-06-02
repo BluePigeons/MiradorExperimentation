@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/widgets/hud.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">src/widgets/hud.js</span></h1>
+    <h2>
+        Statements: <span class="metric">9.09% <small>(4 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 14)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">6.25% <small>(1 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">9.09% <small>(4 / 44)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/widgets/</a> &#187; hud.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+  $.Hud = <span class="fstat-no" title="function not covered" >function(options) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    jQuery.extend(this, {</span>
+      element:   null,
+      windowId:  null,
+      annoState: null,
+      showAnnotations: true,
+      annoEndpointAvailable: false
+    }, options);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.init();</span>
+  };
+&nbsp;
+  $.Hud.prototype = {
+&nbsp;
+    init: <span class="fstat-no" title="function not covered" >function() {   </span>
+<span class="cstat-no" title="statement not covered" >      this.createStateMachine();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.element = jQuery(this.template({</span>
+        showNextPrev : this.showNextPrev, 
+        showBottomPanel : typeof this.bottomPanelAvailable === 'undefined' ? true : this.bottomPanelAvailable,
+        showAnno : this.annotationLayerAvailable
+      })).appendTo(this.appendTo);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (this.annotationLayerAvailable &amp;&amp; this.annoEndpointAvailable) {</span>
+<span class="cstat-no" title="statement not covered" >        this.contextControls = new $.ContextControls({</span>
+          element: null,
+          container: this.appendTo,
+          mode: 'displayAnnotations',
+          windowId: this.windowId,
+          annotationCreationAvailable: this.annotationCreationAvailable,
+          availableTools: this.availableTools
+        });
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.bindEvents();</span>
+    },
+&nbsp;
+    bindEvents: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+    },
+&nbsp;
+    createStateMachine: <span class="fstat-no" title="function not covered" >function() {</span>
+      //add more to these as AnnoState becomes more complex
+<span class="cstat-no" title="statement not covered" >      var _this = this,</span>
+      duration = "200";
+      //initial state is 'none'
+<span class="cstat-no" title="statement not covered" >      this.annoState = StateMachine.create({</span>
+        events: [
+          { name: 'startup',  from: 'none',  to: 'annoOff' },
+          { name: 'displayOn',  from: 'annoOff',  to: 'annoOnCreateOff' },
+          { name: 'refreshCreateOff',  from: 'annoOnCreateOff',  to: 'annoOnCreateOff' },          
+          { name: 'createOn', from: ['annoOff','annoOnCreateOff'], to: 'annoOnCreateOn' },
+          { name: 'refreshCreateOn',  from: 'annoOnCreateOn',  to: 'annoOnCreateOn' },          
+          { name: 'createOff',  from: 'annoOnCreateOn',    to: 'annoOnCreateOff' },
+          { name: 'displayOff', from: ['annoOnCreateOn','annoOnCreateOff'], to: 'annoOff' }
+        ],
+        callbacks: {
+          onstartup: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          ondisplayOn: <span class="fstat-no" title="function not covered" >function(event, from, to) { </span>
+<span class="cstat-no" title="statement not covered" >            if (_this.annoEndpointAvailable) {</span>
+<span class="cstat-no" title="statement not covered" >                jQuery.publish('HUD_FADE_OUT.' + _this.windowId, ['.mirador-osd-annotations-layer', duration, <span class="fstat-no" title="function not covered" >function() {      </span></span>
+<span class="cstat-no" title="statement not covered" >                  _this.contextControls.show();</span>
+                }]);
+            } else {
+<span class="cstat-no" title="statement not covered" >              jQuery.publish('HUD_ADD_CLASS.'+_this.windowId, ['.mirador-osd-annotations-layer', 'selected']);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            jQuery.publish('modeChange.' + _this.windowId, 'displayAnnotations');</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          onrefreshCreateOff: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish('modeChange.' + _this.windowId, 'displayAnnotations');</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          oncreateOn: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="fstat-no" title="function not covered" >            function enableEditingAnnotations() {</span>
+<span class="cstat-no" title="statement not covered" >              jQuery.publish('HUD_ADD_CLASS.'+_this.windowId, ['.mirador-osd-edit-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >              jQuery.publish('modeChange.' + _this.windowId, 'editingAnnotations');</span>
+            }
+<span class="cstat-no" title="statement not covered" >            if (_this.annoEndpointAvailable) {</span>
+<span class="cstat-no" title="statement not covered" >              if (from === "annoOff") {</span>
+<span class="cstat-no" title="statement not covered" >                jQuery.publish('HUD_FADE_OUT.' + _this.windowId, ['.mirador-osd-annotations-layer', duration, <span class="fstat-no" title="function not covered" >function() {      </span></span>
+<span class="cstat-no" title="statement not covered" >                  _this.contextControls.show();</span>
+<span class="cstat-no" title="statement not covered" >                  enableEditingAnnotations();</span>
+                }]);
+              } else {
+<span class="cstat-no" title="statement not covered" >                enableEditingAnnotations();</span>
+              }
+            }
+<span class="cstat-no" title="statement not covered" >            jQuery.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          onrefreshCreateOn: <span class="fstat-no" title="function not covered" >function(event, from, to) {</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish('modeChange.' + _this.windowId, 'editingAnnotations');</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          oncreateOff: <span class="fstat-no" title="function not covered" >function(event, from, to) { </span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-edit-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish('modeChange.' + _this.windowId, 'displayAnnotations');</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          },
+          ondisplayOff: <span class="fstat-no" title="function not covered" >function(event, from, to) { </span>
+<span class="cstat-no" title="statement not covered" >            if (_this.annoEndpointAvailable) {</span>
+<span class="cstat-no" title="statement not covered" >              jQuery.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-edit-mode', 'selected']);</span>
+<span class="cstat-no" title="statement not covered" >              _this.contextControls.hide(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                jQuery.publish('HUD_FADE_IN.' + _this.windowId, ['.mirador-osd-annotations-layer', duration]);</span>
+              });
+            } else {
+<span class="cstat-no" title="statement not covered" >              jQuery.publish('HUD_REMOVE_CLASS.'+_this.windowId, ['.mirador-osd-annotations-layer', 'selected']);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            jQuery.publish('modeChange.' + _this.windowId, 'default');</span>
+<span class="cstat-no" title="statement not covered" >            jQuery.publish(('windowUpdated'), {</span>
+              id: _this.windowId,
+              annotationState: to
+            });
+          }
+        }
+      });
+    },
+&nbsp;
+    template: Handlebars.compile([
+                                 '{{#if showNextPrev}}',
+                                 '&lt;a class="mirador-osd-previous hud-control "&gt;',
+                                 '&lt;i class="fa fa-3x fa-chevron-left "&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '{{/if}}',
+                                 '{{#if showAnno}}',
+                                 '&lt;a class="mirador-osd-annotations-layer hud-control" role="button" aria-label="Toggle annotations"&gt;',
+                                 '&lt;i class="fa fa-lg fa-comments"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '{{/if}}',
+                                 '{{#if showNextPrev}}',
+                                 '&lt;a class="mirador-osd-next hud-control "&gt;',
+                                 '&lt;i class="fa fa-3x fa-chevron-right"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '{{/if}}',
+                                 '{{#if showBottomPanel}}',
+                                 '&lt;a class="mirador-osd-toggle-bottom-panel hud-control" role="button" aria-label="Toggle Bottom Panel"&gt;',
+                                 '&lt;i class="fa fa-2x fa-ellipsis-h"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '{{/if}}',
+                                 '&lt;div class="mirador-pan-zoom-controls hud-control"&gt;',
+                                 '&lt;a class="mirador-osd-up hud-control" role="button" aria-label="Move image up"&gt;',
+                                 '&lt;i class="fa fa-chevron-circle-up"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-right hud-control" role="button" aria-label="Move image right"&gt;',
+                                 '&lt;i class="fa fa-chevron-circle-right"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-down hud-control" role="button" aria-label="Move image down"&gt;',
+                                 '&lt;i class="fa fa-chevron-circle-down"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-left hud-control" role="button" aria-label="Move image left"&gt;',
+                                 '&lt;i class="fa fa-chevron-circle-left"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-zoom-in hud-control" role="button" aria-label="Zoom in"&gt;',
+                                 '&lt;i class="fa fa-plus-circle"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-zoom-out hud-control" role="button" aria-label="Zoom out"&gt;',
+                                 '&lt;i class="fa fa-minus-circle"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;a class="mirador-osd-go-home hud-control" role="button" aria-label="Reset image bounds"&gt;',
+                                 '&lt;i class="fa fa-home"&gt;&lt;/i&gt;',
+                                 '&lt;/a&gt;',
+                                 '&lt;/div&gt;'
+    ].join(''))
+&nbsp;
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 01 2016 17:36:14 GMT+0100 (BST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

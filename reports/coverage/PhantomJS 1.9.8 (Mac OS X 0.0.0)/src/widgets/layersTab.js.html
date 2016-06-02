@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/widgets/layersTab.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">src/widgets/layersTab.js</span></h1>
+    <h2>
+        Statements: <span class="metric">8.11% <small>(3 / 37)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">7.69% <small>(1 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">8.33% <small>(3 / 36)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/widgets/</a> &#187; layersTab.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($) {
+&nbsp;
+  $.LayersTab = <span class="fstat-no" title="function not covered" >function(options) {</span>
+<span class="cstat-no" title="statement not covered" >    jQuery.extend(true, this, {</span>
+      element:           null,
+      appendTo:          null,
+      manifest:          null,
+      visible:           null
+    }, options);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.init();</span>
+  };
+&nbsp;
+  $.LayersTab.prototype = {
+    init: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+<span class="cstat-no" title="statement not covered" >      this.windowId = this.windowId;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.localState({</span>
+        id: 'layersTab',
+        visible: this.visible,
+        selectedList: null,
+        empty: true
+      }, true);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.listenForActions();</span>
+<span class="cstat-no" title="statement not covered" >      this.render(this.localState());</span>
+<span class="cstat-no" title="statement not covered" >      this.loadTabComponents();</span>
+<span class="cstat-no" title="statement not covered" >      this.bindEvents();</span>
+    },
+&nbsp;
+    localState: <span class="fstat-no" title="function not covered" >function(state, initial) {</span>
+<span class="cstat-no" title="statement not covered" >      if (!arguments.length) <span class="cstat-no" title="statement not covered" >return this.layerTabState;</span></span>
+<span class="cstat-no" title="statement not covered" >      this.layerTabState = state;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (!initial) {</span>
+<span class="cstat-no" title="statement not covered" >        jQuery.publish('layersTabStateUpdated.' + this.windowId, this.layerTabState);</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return this.layerTabState;</span>
+    },
+&nbsp;
+    loadTabComponents: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+&nbsp;
+    },
+&nbsp;
+    tabStateUpdated: <span class="fstat-no" title="function not covered" >function(visible) {</span>
+<span class="cstat-no" title="statement not covered" >      var localState = this.localState();</span>
+<span class="cstat-no" title="statement not covered" >      localState.visible = localState.visible ? false : true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.localState(localState);</span>
+    },
+&nbsp;
+    toggle: <span class="fstat-no" title="function not covered" >function() {</span>},
+&nbsp;
+    listenForActions: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      jQuery.subscribe('layersTabStateUpdated.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(_, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        _this.render(data);</span>
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      jQuery.subscribe('tabStateUpdated.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(_, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        _this.tabStateUpdated(data.layersTab);</span>
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      jQuery.subscribe('currentCanvasIDUpdated.' + _this.windowId, <span class="fstat-no" title="function not covered" >function(event, canvasID) {</span></span>
+        //update layers for this canvasID
+      });
+    },
+&nbsp;
+    bindEvents: <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this;</span>
+&nbsp;
+    },
+&nbsp;
+    render: <span class="fstat-no" title="function not covered" >function(state) {</span>
+<span class="cstat-no" title="statement not covered" >      var _this = this,</span>
+      templateData = {};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (this.element) {</span>
+<span class="cstat-no" title="statement not covered" >        _this.appendTo.find(".layersPanel").remove();</span>
+      }
+<span class="cstat-no" title="statement not covered" >      this.element = jQuery(_this.template(templateData)).appendTo(_this.appendTo);</span>
+      
+<span class="cstat-no" title="statement not covered" >      _this.bindEvents();</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (state.visible) {</span>
+<span class="cstat-no" title="statement not covered" >        this.element.show();</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.element.hide();</span>
+      }
+    },
+&nbsp;
+    template: Handlebars.compile([
+      '&lt;div class="layersPanel"&gt;',
+      '&lt;/div&gt;',
+      ].join(''))
+  };
+&nbsp;
+}(Mirador));
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 01 2016 17:36:14 GMT+0100 (BST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

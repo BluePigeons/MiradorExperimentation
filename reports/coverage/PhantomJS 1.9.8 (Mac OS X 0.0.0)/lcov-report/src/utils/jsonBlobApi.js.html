@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/utils/jsonBlobApi.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">src/utils/jsonBlobApi.js</span></h1>
+    <h2>
+        Statements: <span class="metric">71.79% <small>(28 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">62.5% <small>(10 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">60% <small>(6 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">71.79% <small>(28 / 39)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">src/utils/</a> &#187; jsonBlobApi.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4869</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function($){
+&nbsp;
+  var JSONBLOB_API_ENDPOINT = '/api/jsonBlob';
+&nbsp;
+  function getAPIUri(host, port, ssl, body) {
+&nbsp;
+	var proto = 'http';
+	port = port ? port : <span class="branch-1 cbranch-no" title="branch not covered" >'80';</span>
+&nbsp;
+	<span class="missing-if-branch" title="else path not taken" >E</span>if ( ssl ) {
+		proto = 'https';
+		port = port ? port : <span class="branch-1 cbranch-no" title="branch not covered" >'443';</span>
+	}
+&nbsp;
+	host = host ? host : <span class="branch-1 cbranch-no" title="branch not covered" >'jsonblob.com';</span>
+&nbsp;
+	var path = JSONBLOB_API_ENDPOINT;
+&nbsp;
+        // If the body is a string, this is a blob GET operation, 
+	// otherwise it's a POST	
+        <span class="missing-if-branch" title="if path not taken" >I</span>if ( typeof body === 'string' || body instanceof String ){
+<span class="cstat-no" title="statement not covered" >		path += '/' + body;</span>
+	}
+&nbsp;
+	return proto + '://' + host + ':' + port + path;
+  }
+&nbsp;
+  function initSettings(method, host, port, ssl, requestBody) {
+&nbsp;
+	var ajaxSettings = {
+		type: method,
+		url: getAPIUri(host, port, ssl, requestBody),
+		contentType: 'application/json; charset=UTF-8',
+		accept: 'application/json',
+		dataType: 'json',
+		processData: false
+	};
+&nbsp;
+	// POST The data
+        <span class="missing-if-branch" title="else path not taken" >E</span>if ( typeof requestBody  !== 'string' &amp;&amp; !(requestBody instanceof String) ) {
+		ajaxSettings.data = JSON.stringify(requestBody);
+	}
+&nbsp;
+	return ajaxSettings;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function syncRequest(method, host, port, ssl, requestBody) {</span>
+<span class="cstat-no" title="statement not covered" >	var result;</span>
+<span class="cstat-no" title="statement not covered" >	var settings = initSettings(method, host, port, ssl, requestBody);</span>
+<span class="cstat-no" title="statement not covered" >	settings.async = false;</span>
+<span class="cstat-no" title="statement not covered" >	settings.success = <span class="fstat-no" title="function not covered" >function(data, textStatus, request) {</span></span>
+<span class="cstat-no" title="statement not covered" >          result = data;</span>
+        };
+<span class="cstat-no" title="statement not covered" >	jQuery.ajax(settings);</span>
+<span class="cstat-no" title="statement not covered" >	return result;</span>
+  }
+&nbsp;
+  function asyncRequest(method, host, port, ssl, requestBody, cb) {
+	var settings = initSettings(method, host, port, ssl, requestBody);
+	settings.success = cb;
+	jQuery.ajax(settings);
+  }
+&nbsp;
+  $.JSONBlobAPI = function(options) {
+	this.options = options;
+  };
+&nbsp;
+&nbsp;
+  $.JSONBlobAPI.prototype = {
+	readSync: <span class="fstat-no" title="function not covered" >function(blobId) {</span>
+<span class="cstat-no" title="statement not covered" >		return syncRequest('GET', this.options.host, this.options.port, this.options.ssl, blobId);</span>
+	},
+	save: function(blob) {
+		var deferred = jQuery.Deferred();
+		asyncRequest('POST', this.options.host, this.options.port, this.options.ssl, blob, <span class="fstat-no" title="function not covered" >function(data, textStatus, request) {</span>
+<span class="cstat-no" title="statement not covered" >			var blobid = request.getResponseHeader('X-Jsonblob');</span>
+<span class="cstat-no" title="statement not covered" >			deferred.resolve(blobid);</span>
+		});
+		return deferred.promise();
+	}
+  };
+&nbsp;
+}(Mirador));
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 01 2016 17:36:14 GMT+0100 (BST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
